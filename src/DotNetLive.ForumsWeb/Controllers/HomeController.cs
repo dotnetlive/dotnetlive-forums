@@ -5,13 +5,28 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using MimeKit;
 using MailKit.Net.Smtp;
+using DotNetLive.ForumsWeb.Services;
+using AutoMapper;
+using DotNetLive.ForumsWeb.Models.TopicViewModels;
 
 namespace DotNetLive.ForumsWeb.Controllers
 {
     public class HomeController : Controller
     {
+        public TopicQueryService _topicQueryService { get; private set; }
+        private IMapper _mapper;
+
+        public HomeController(TopicQueryService topicQueryService,
+            IMapper mapper)
+        {
+            this._topicQueryService = topicQueryService;
+            _mapper = mapper;
+        }
+        
         public IActionResult Index()
         {
+            var list = _topicQueryService.SearchTopic();
+            ViewBag.Topics = _mapper.Map<IEnumerable<TopicViewModel>>(list);
             return View();
         }
 

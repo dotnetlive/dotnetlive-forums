@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26228.4
+VisualStudioVersion = 15.0.26228.9
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotNetLive.ForumsWeb", "DotNetLive.ForumsWeb\DotNetLive.ForumsWeb.csproj", "{0EB95037-B688-4CC6-8F13-90DED20734BD}"
 EndProject
@@ -12,6 +12,8 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotNetLive.Framework.Mvc", "..\..\dotnetlive.framework\src\DotNetLive.Framework.Mvc\DotNetLive.Framework.Mvc.csproj", "{66FCC1E2-1EBE-4496-B874-394BD2139214}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotNetLive.Framework.WebApiClient", "..\..\dotnetlive.framework\src\DotNetLive.Framework.WebApiClient\DotNetLive.Framework.WebApiClient.csproj", "{1A1F5E6A-50F7-4C7F-9C82-41720119E6BF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotNetLive.Framework.Data", "..\..\dotnetlive.framework\src\DotNetLive.Framework.Data\DotNetLive.Framework.Data.csproj", "{751EBCD0-7EC5-4165-8DFC-2EE8D69C405F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -83,6 +85,18 @@ Global
 		{1A1F5E6A-50F7-4C7F-9C82-41720119E6BF}.Release|x64.Build.0 = Release|Any CPU
 		{1A1F5E6A-50F7-4C7F-9C82-41720119E6BF}.Release|x86.ActiveCfg = Release|Any CPU
 		{1A1F5E6A-50F7-4C7F-9C82-41720119E6BF}.Release|x86.Build.0 = Release|Any CPU
+		{751EBCD0-7EC5-4165-8DFC-2EE8D69C405F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{751EBCD0-7EC5-4165-8DFC-2EE8D69C405F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{751EBCD0-7EC5-4165-8DFC-2EE8D69C405F}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{751EBCD0-7EC5-4165-8DFC-2EE8D69C405F}.Debug|x64.Build.0 = Debug|Any CPU
+		{751EBCD0-7EC5-4165-8DFC-2EE8D69C405F}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{751EBCD0-7EC5-4165-8DFC-2EE8D69C405F}.Debug|x86.Build.0 = Debug|Any CPU
+		{751EBCD0-7EC5-4165-8DFC-2EE8D69C405F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{751EBCD0-7EC5-4165-8DFC-2EE8D69C405F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{751EBCD0-7EC5-4165-8DFC-2EE8D69C405F}.Release|x64.ActiveCfg = Release|Any CPU
+		{751EBCD0-7EC5-4165-8DFC-2EE8D69C405F}.Release|x64.Build.0 = Release|Any CPU
+		{751EBCD0-7EC5-4165-8DFC-2EE8D69C405F}.Release|x86.ActiveCfg = Release|Any CPU
+		{751EBCD0-7EC5-4165-8DFC-2EE8D69C405F}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
