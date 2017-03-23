@@ -1,0 +1,37 @@
+﻿@using DotNetLive.Forums.Entities
+@model Topic
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="row">
+    <div class="col-md-12" style="margin-top:20px;">
+        <div class="topic-detail panel panel-default">
+            <div class="panel-heading media clearfix">
+                <div class="media-body">
+                    <h1 class="media-heading">@(Model.Top == 1 ? "[置顶]" : "")@Model.Title</h1>
+                    <div class="info">
+                        <a href="#">@Model.Email</a>·于<abbr class="timeago">@Model.Createdon.ToString("MM-dd HH:mm")</abbr>发布
+                        ·
+                        @Model.ViewCount 次阅读
+                    </div>
+                </div>
+                <div class="media-right">
+                    <a href="#"><img class="media-object avatar-48" src="/images/96.png"></a>
+                </div>
+            </div>
+            <div class="panel-body markdown">
+                <p id="content">@Model.Content</p>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <p class="panel-title">回复：</p>
+            </div>
+            <div class="items panel-body">
+                
+            </div>
+        </div>
+        
+    </div>
+</div>

@@ -1,5 +1,7 @@
 ﻿using DotNetLive.ForumsWeb.Events;
 using DotNetLive.ForumsWeb.Services;
+using DotNetLive.Framework.Data;
+using DotNetLive.Framework.Data.Repositories;
 using DotNetLive.Framework.DependencyManagement;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -22,6 +24,19 @@ namespace DotNetLive.ForumsWeb.DependencyRegister
 
             services.Configure<RabbitMQSettings>(configuration.GetSection("RabbitMQSettings"));
             services.AddSingleton<RabbitMQConnectionManager>();
+
+            #region Data Layer
+            services.Configure<DbSettings>(configuration.GetSection("DbSettings"));
+
+            services.AddScoped<CommandDbConnection>();
+            services.AddScoped<QueryDbConnection>();
+
+            services.AddScoped<IQueryRepository, QueryRepository>();
+            services.AddScoped<ICommandRepository, CommandRepository>();
+            #endregion
+
+            services.AddScoped<TopicCommandService>();
+            services.AddScoped<TopicQueryService>();
         }
     }
 }
